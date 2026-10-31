@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -137,6 +138,7 @@ export default function LandingPage() {
                 <Zap className="h-4 w-4 text-emerald-500" aria-hidden="true" /> Set up in 2 minutes
               </span>
             </div>
+          </div>
           </div>
 {/* Phone mockup */}
 <div className="relative mx-auto w-full max-w-[350px]">

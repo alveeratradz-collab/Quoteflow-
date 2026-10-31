@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     const { priceId } = await req.json();
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"] as string[],
+     
       line_items: [
         {
           price: priceId,
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
       mode: "subscription",
       success_url: "https://app.alveeratradz.com/dashboard?success=true",
       cancel_url: "https://app.alveeratradz.com/pricing?canceled=true",
-    });
+    }as any);
 
     return NextResponse.json({ url: session.url });
   } catch (error: any) {
