@@ -89,10 +89,8 @@ export default function LandingPage() {
             <a href="#pricing" className="hover:text-brand-700">Pricing</a>
           </nav>
           <div className="flex items-center gap-2">
-            <Link href="/login" className="btn-ghost hidden sm:inline-flex">
-              Sign in
-            </Link>
-            <Link href="/register" className="btn-primary flex items-center gap-2">
+            <Link href="/login" className="btn-ghost hidden sm:inline-flex">Sign in</Link>
+            <Link href="/register" className="btn-primary">
               Start free <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
@@ -101,23 +99,23 @@ export default function LandingPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_-10%,#dcfce7,transparent)]"></div>
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-14 sm:px-6 lg:grid-cols-2">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_-10%,#dcebff_0%,rgba(255,255,255,0)_70%)]" />
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-14 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:pt-20">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-sm text-brand-700">
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1.5 text-[12px] font-bold text-brand-700">
               <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
               Built for plumbers, sparkies, cleaners & gardeners
             </span>
             <h1 className="mt-5 text-[34px] leading-[1.06] font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-              Quote faster.<br />
+              Quote faster.
+              <br />
               Get paid <span className="text-brand-600">sooner.</span>
             </h1>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-base">
-              QuoteFlow keeps your customers, quotations, invoices and jobs in one tidy place — with one-tap WhatsApp follow-ups so nothing slips through the cracks. No spreadsheets, no paperwork, no chasing.
+            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-slate-600 sm:text-base">
+              QuoteFlow keeps your customers, quotations, invoices and jobs in one tidy place — with
+              one-tap WhatsApp follow-ups so nothing slips through the cracks. No spreadsheets, no
+              paperwork, no chasing.
             </p>
-          </div>
-        </div>
-      </section>
             <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
               <Link href="/register" className="btn-primary px-5 py-3 text-[15px]">
                 Start free — no card needed <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -140,19 +138,18 @@ export default function LandingPage() {
               </span>
             </div>
           </div>
-
-          {/* Phone mockup */}
-          <div className="relative mx-auto w-full max-w-[350px]">
-            <div className="absolute -inset-6 -z-10 rounded-[48px] bg-gradient-to-br from-brand-100 via-white to-brand-50 blur-xl" />
-            <div className="rounded-[34px] border border-slate-200 bg-slate-900 p-2 shadow-[0_40px_80px_-40px_rgba(15,23,42,0.55)]">
-              <div className="overflow-hidden rounded-[26px] bg-[#f5f7fb]">
-                <div className="bg-white px-4 pt-3 pb-2">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-[9px] font-bold tracking-widest text-slate-400 uppercase">AquaFix Plumbing</p>
-                      <p className="text-[15px] font-extrabold text-slate-900">Good morning, Dave</p>
-                    </div>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-50 text-[10px] font-bold text-brand-700">
+{/* Phone mockup */}
+<div className="relative mx-auto w-full max-w-[350px]">
+  <div className="absolute -inset-6 -z-10 rounded-[48px] bg-gradient...">
+  <div className="rounded-[34px] border border-slate-200 bg-slate...">
+    <div className="overflow-hidden rounded-[26px] bg-[#f5f7fb]">
+      <div className="bg-white px-4 pt-3 pb-2">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="...">AquaFix Plumbers</p>
+            <p className="...">Good morning. Dave</p>
+          </div>
+          <span className="...">
                       DC
                     </span>
                   </div>
