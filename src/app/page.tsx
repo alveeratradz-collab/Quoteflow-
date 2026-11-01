@@ -58,24 +58,28 @@ const steps = [
   { title: "Send the quote", body: "Build it in seconds, then WhatsApp the link or attach the PDF." },
   { title: "Get paid", body: "Accept the quote, convert to invoice, record the payment when it lands." },
 ];
-
 export default function LandingPage() {
-    const handleCheckout = async (priceId: string) => {
+  const handleCheckout = async (priceId: string) => {
     try {
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ priceId }),
       });
-      const data = await response.json();
       
+      const data = await response.json();
+
       if (data.url) {
         window.location.href = data.url; // Stripe પેમેન્ટ પેજ પર જશે
       } else {
-        alert("પેમેન્ટ પ્રોસેસમાં ભૂલ આવી છે.");
+        // સર્વર તરફથી આવતી અસલી એરર બતાવો
+        alert("Stripe Error: " + (data.error || "Unknown error"));
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Checkout Error:", error);
+      alert("નેટવર્ક ભૂલ: સર્વર સાથે કનેક્ટ થઈ શકાયું નહીં.");
+    }
+  };
     }
   };
   return (
