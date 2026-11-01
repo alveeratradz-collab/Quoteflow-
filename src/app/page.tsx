@@ -80,9 +80,7 @@ export default function LandingPage() {
       alert("નેટવર્ક ભૂલ: સર્વર સાથે કનેક્ટ થઈ શકાયું નહીં.");
     }
   };
-    }
-  };
-  return (
+    return (
     <div className="min-h-dvh bg-white">
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
